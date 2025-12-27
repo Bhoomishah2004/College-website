@@ -1,0 +1,444 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== THEME VARIABLES ===== */
+:root {
+  --primary: #0F766E;
+  --secondary: #115E59;
+  --accent: #5EEAD4;
+  --bg: #F8FAFC;
+  --text: #1F2933;
+  --muted: #64748B;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+  background: #0b5f5a; /* darker than hero */
+  padding: 10px 0;
+}
+
+.logo-img {
+  width: 44px;
+  margin-right: 10px;
+  border-radius: 10px;   /* subtle, professional rounding */
+  object-fit: cover;
+}
+
+.brand-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  color: #e6fffa;
+  margin: 0 12px;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.apply-btn {
+  background: var(--accent);
+  color: var(--secondary);
+  padding: 8px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== HERO SECTION (NO COLOR OVERLAY) ===== */
+.hero-section {
+  min-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/img8.jpeg") center/cover no-repeat;
+  opacity: 0.45; /* image opacity only */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #0f172a; /* dark text for contrast */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin: 16px 0 28px;
+  font-size: 1.2rem;
+  color: #334155;
+}
+
+.hero-btn {
+  background: #0F766E;
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.about-img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--secondary);
+  color: #d1fae5;
+  padding: 50px 0 20px;
+}
+
+.footer h5 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #c7f9f1;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+/* ===== FOOTER ICONS (CLEAN & NEUTRAL) ===== */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.social-icons a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   GLOBAL MOBILE RESPONSIVENESS (ALL PAGES)
+   ====================================================== */
+
+@media (max-width: 992px) {
+
+  /* ===== NAVBAR ===== */
+  .custom-navbar {
+    padding: 8px 0;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .apply-btn {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-btn {
+    padding: 10px 26px;
+    font-size: 0.95rem;
+  }
+
+  /* ===== ABOUT SECTION ===== */
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .about-img {
+    margin-top: 20px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+  }
+
+  .footer h5 {
+    margin-top: 20px;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* ===== HERO SECTION (SMALL PHONES) ===== */
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  /* ===== LOGO ===== */
+  .logo-img {
+    width: 38px;
+  }
+
+  /* ===== BUTTONS ===== */
+  .apply-btn,
+  .hero-btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* =====================================================
+   COURSES & STREAMS – FINAL CLEAN UI
+   ===================================================== */
+
+.stream-box {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.stream-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.stream-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.stream-content h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stream-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.stream-content a {
+  align-self: flex-start;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stream-content a:hover {
+  opacity: 0.9;
+}
+
+/* ======================================================
+   STREAM DETAIL PAGES (IT / COMMERCE / HOTEL)
+   ====================================================== */
+
+/* Page header spacing consistency */
+.stream-page-header {
+  margin-bottom: 40px;
+}
+
+/* Course card (used in IT_pg, BAF_pg, hm_pg) */
+.course-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Inner content */
+.course-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Course title */
+.course-body h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Course details text */
+.course-body p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Inquiry button */
+.course-btn {
+  align-self: flex-start;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.course-btn:hover {
+  opacity: 0.9;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   MOBILE OPTIMIZATION (STREAM PAGES)
+   ====================================================== */
+
+@media (max-width: 768px) {
+  .course-body {
+    padding: 20px;
+  }
+
+  .course-body h5 {
+    font-size: 1rem;
+  }
+
+  .course-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ======================================================
+   BACK BUTTON (DETAIL PAGES)
+   ====================================================== */
+
+.back-link {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+  transform: translateX(-4px);
+}
+
+/* ======================================================
+   ABOUT PAGE – PROFILE IMAGE FIX
+   ====================================================== */
+
+.about-profile img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.about-profile h6 {
+  font-weight: 600;
+}
+
+.about-profile p {
+  font-size: 0.9rem;
+}
+
